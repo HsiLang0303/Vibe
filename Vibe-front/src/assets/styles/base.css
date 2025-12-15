@@ -1,0 +1,33 @@
+html,
+body,
+#app {
+  height: 100%;
+}
+body {
+  margin: 0;
+  overscroll-behavior: none;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+:root {
+  --safe-top: env(safe-area-inset-top, 0);
+  --safe-bottom: env(safe-area-inset-bottom, 0);
+  --fs-title: clamp(1.25rem, 2.8vw, 1.625rem);
+  --fs-sub: clamp(0.8125rem, 2vw, 1rem);
+  --radius: 1rem;
+  --space-sm: 0.5rem;
+  --space-md: 0.75rem;
+  --space-lg: 1rem;
+}
+.safe-area {
+  padding-top: var(--safe-top);
+  padding-bottom: var(--safe-bottom);
+}
